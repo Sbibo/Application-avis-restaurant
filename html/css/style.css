@@ -1,0 +1,405 @@
+
+/*Style CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  height: 100%;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+
+a {
+  color: #DFDFDF;
+  font-weight: bold;
+}
+
+a:focus {
+  outline: 2px solid;
+  outline-offset: .15em;
+}
+
+
+#menu {
+  position: relative;
+  max-height: 10%;
+  width: 100%;
+  padding : 1%;
+  text-align: center;
+  background-color: rgba(121, 123, 131, 0.733);
+  border-color: #ffffff;
+  z-index: 2;
+}
+
+#refreshId  {
+  float: right;
+  width: 10%;
+  text-align: center;
+  font-size: 0.8em;
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  border-color: #ffffff;
+}
+
+#autocompleteId {
+  width: 50%;
+  text-align: center;
+  font-size: 0.8em;
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #DFDFDF;
+  background-color: #000000;
+  border-color: #ffffff;
+}
+
+/* menu déroulant */
+#filterId {
+  float: right;
+  width: 10%;
+  text-align: center;
+  font-size: 0.8em;
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #DFDFDF;
+  background-color: #000000;
+  border-color: #ffffff;
+}
+#filterId2 {
+  float: right;
+  width: 10%;
+  text-align: center;
+  font-size: 0.8em;
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #DFDFDF;
+  background-color: #000000;
+  border-color: #ffffff;
+}
+
+#sidebarId {
+  max-height: 100%;
+  width: 40%;
+  float: left;
+  padding-top: 0;
+  margin-top: 0;
+  padding-right: 2%;
+  background-color: #FFFFFF;
+  border-bottom: solid;
+  border-color: #EFEFF4;
+  border-width: 1px;
+  visibility: visible;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position : absolute;
+  z-index: 1;
+}
+
+/* mise en page partie item */
+.item {
+  width: 110%;
+  height: 1px;
+  padding-left: 1%;
+  margin-right: 10%;
+  padding-right: 9%;
+  background-color: rgb(255, 255, 255);
+  border-bottom: solid;
+  border-color: #EFEFF4;
+  border-width: 1px;
+  color : #0b0f0c;
+  font-size: 0.8em;
+  display: block;
+  overflow: auto;
+  transition: backgroundAnimation;
+  transition-property: height;
+  transition-duration: 1s;
+}
+
+@keyframes backgroundAnimation {
+  from {background-color: #FFFFFF;}
+  to {background-color: rgb(255, 248, 248);}
+}
+
+.close {
+  
+  margin-right: 06%;
+  font-size: 38px;
+  font-weight: bold;
+  display: block;
+  color: black;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.itemNameClass{
+  width: 90%;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.itemRatingClass {
+ visibility: hidden;
+}
+
+.itemCommentInfoClass {
+  max-width: 100%;
+  float: left;
+}
+
+.itemCommentAuthorClass, .commentNameClass {
+  max-width: 100%;
+  font-weight: bold;
+}
+
+.itemCommentTimeClass {
+  max-width: 100%;
+  font-style: italic;
+}
+
+.itemCommentClassNode {
+  display: none;
+  transition-property: height;
+  transition-duration: 2s;
+}
+
+
+/* Commentaire de la modal */
+#buttonModalAddCommentId {
+  float: left;
+  width: 15%;
+  margin-right: 5%;
+  text-align: center;
+  font-size: 0.8em;
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #51969b;
+  border-color: #191919;
+  display: none;
+}
+
+.modal-header {
+  background-color: rgba(245, 245, 245, 0.89);
+  font-size: 0.8em;
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #121212;
+  border-width: 1px;
+}
+
+.modal-body {
+  background-color: #F4F9FC;
+  font-size: 0.8em;
+  font-style: italic;
+  font-family: sans-serif;
+  border-style: solid;
+  border-color: #121212;
+  border-width: 1px;
+}
+
+#buttonModalValidCommentId, #buttonModalAddCloseId {
+  text-align: center;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+  color: #DFDFDF;
+  background-color: #121212;
+  border-color: #883636;
+}
+
+#map {
+  height: 90%;
+  width: 60%;
+  padding: 0;
+  float: right;
+  background-color: #121212;
+  position: relative;
+  z-index: 3;
+  border: 3px solid black;
+}
+
+
+
+#footerId{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+  height: 10%;
+  padding-top: 2%;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  background-color: #FFFFFF;
+  z-index: 2;
+}
+
+
+
+#refreshId {
+  float: left;
+  width: 18%;
+
+  margin-right: 5%;
+  text-align: center;
+  font-size: 1em;
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #DFDFDF;
+  background-color: #121212;
+  border-color: #121212;
+}
+
+/*============================================================================================================================================================*/
+/*========== MEDIA QUERIES ===================================================================================================================================*/
+/*============================================================================================================================================================*/
+/*========== ECRAN SUPERIEUR A 1024px ========================================================================================================================*/ -->
+@media all and (max-width: 1024px)
+{
+  *{
+      width: auto;
+
+  }
+
+  #menu {
+      max-height: 8%;
+      width: 100%;
+      padding: 1%;
+      text-align: center;
+  }
+
+  /* mise en page partie recherche */
+  #autocompleteId {
+      margin-left: 2%;
+      margin-right: 2%;
+      margin-bottom: 2%;
+      max-width: 40%;
+      text-align: center;
+      color: #EED2EE;
+      font-size: 10px;
+  }
+
+  /* refresh */
+ 
+
+  /* menu déroulant */
+
+
+  #info {
+      display: none;
+  }
+
+  #sidebarId {
+      width: 110%;
+      height: 38%;
+      padding-left: -1%;
+      margin: 0;
+      position: fixed;
+      left: 0;
+      bottom: 8%;
+      background-color: rgb(227, 45, 45);
+      z-index: 2;
+  }
+
+  #jsonId {
+      width: 105%;
+      height: 42%;
+      padding: 0;
+      margin: 0;
+      position: fixed;
+      left: 0;
+      bottom: 8%;
+  }
+
+  #buttonChargerJsonId {
+      width: 30%;
+      margin: 1%;
+      text-align: center;
+      font-size: 0.8em;
+      font-style: italic;
+      font-weight: bold;
+      color: #DFDFDF;
+      background-color: #121212;
+      border-color: #121212;
+      position: fixed;
+      left: 0;
+      bottom: 8%;
+      z-index: 2;
+  }
+
+  .item {
+      width: 100%;
+      padding-left: 10%;
+      margin-right: 10%;
+      padding-right: 9%;
+      background-color: #FFFFFF;
+      border-bottom: solid;
+      border-color: rgb(0, 0, 0);
+      border-width: 1px;
+      color : #2D5BE3;
+      text-align: justify-all;
+      font-size: 0.8em;
+      display: block;
+      overflow: auto;
+      transition-property: height;
+      transition-duration: 2s;
+  }
+
+  .itemCommentAuthorClass, .commentNameClass {
+      min-width: 10%;
+      font-weight: bold;
+      font-style: italic;
+      font-family: sans-serif;
+      text-align: left;
+  }
+
+  .itemCommentTimeClass {
+      min-width: 10%;
+      text-align: left;
+      float: left;
+  }
+
+  #map {
+      width: 100%;
+      height: 47%;
+      background-color: #af0101;
+      padding: 0;
+      margin: 0;
+      position: relative;
+  }
+
+  #footerId {
+      width: 100%;
+      background-color: rgb(227, 51, 45);
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      max-height: 8%;
+  }
+
+
+
+
+}
